@@ -11,10 +11,14 @@ class School
   end
 
   def add_student(student_name, grade)
-    if !roster[grade].is_a?(Array)
-      roster[grade] =[]
-    end
+    # if !roster[grade].is_a?(Array)
+    #   roster[grade] =[]
+    # end
+    # roster[grade] << student_name
+
+    roster[grade] ||= []
     roster[grade] << student_name
+
   end
 
   def grade(grade)
